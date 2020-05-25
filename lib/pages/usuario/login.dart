@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tarefas/controller/usuario.controller.dart';
+import 'package:tarefas/pages/usuario/novo.usuario.dart';
 import 'package:tarefas/utils/cores.util.dart';
 import 'package:tarefas/widget/decoration.dart';
 
@@ -120,7 +121,10 @@ class _LoginState extends State<Login> {
             height: 20,
             margin: EdgeInsets.only(bottom: 10),
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NovoUsuario()));
+              },
               child: Text(
                 'Criar conta',
                 style: TextStyle(

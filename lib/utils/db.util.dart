@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tarefas/utils/console.dart';
+import 'package:tarefas/utils/console.util.dart';
 
 const String usuarioJson = 'dadosUsuario';
 

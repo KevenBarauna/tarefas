@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tarefas/models/usuario.model.dart';
-import 'package:tarefas/utils/console.dart';
-import 'package:tarefas/utils/db.dart';
+import 'package:tarefas/utils/console.util.dart';
+import 'package:tarefas/utils/db.util.dart';
 
 List<UsuarioModel> usuarios = [];
 

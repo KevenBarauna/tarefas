@@ -1,16 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tarefas/db/usuario.db.dart';
+import 'package:tarefas/utils/system.util.dart';
 
 consoletesteUsuario() async {
-  UsuarioDb usuario = new UsuarioDb();
-
-  //await usuario.apagarEspecifico(2);
-  //await usuario.apagarEspecifico(4);
-  await usuario.getDados();
-  await usuario.apagarEspecifico(1);
-
-  print('FIM TESTE');
+  getData();
 }
 
 class PaginaTeste extends StatefulWidget {

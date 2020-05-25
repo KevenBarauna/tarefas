@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tarefas/pages/index.dart';
 import 'package:tarefas/pages/testes.dart';
 
 void main() => runApp(MyApp());

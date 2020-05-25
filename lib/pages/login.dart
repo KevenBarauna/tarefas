@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tarefas/controller/usuario.controller.dart';
 import 'package:tarefas/utils/cores.util.dart';
 import 'package:tarefas/widget/decoration.dart';
 
 var nome = TextEditingController();
 var senha = TextEditingController();
-var mensagem = 'usuário não encotrado';
+var mensagem = '';
+var controllerUsuario = new UsuarioController();
 
 class Login extends StatefulWidget {
   @override
@@ -13,6 +15,18 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  fazerLogin() async {
+    mensagem =
+        await controllerUsuario.verificaLogin(nome.text, senha.text, context);
+    setState(() {
+      mensagem = mensagem;
+    });
+    if (mensagem == null) {
+      nome.text = '';
+      senha.text = '';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +56,7 @@ class _LoginState extends State<Login> {
               keyboardType: TextInputType.text,
               decoration: decoracaoInput('Senha'),
               style: decoracaoInputText(),
-              controller: nome,
+              controller: senha,
             ),
           ),
           Container(
@@ -79,7 +93,9 @@ class _LoginState extends State<Login> {
             decoration: botaoDecoracao(),
             child: SizedBox(
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  fazerLogin();
+                },
                 child: Text(
                   'Entrar',
                   style: botaoTextStyle(),

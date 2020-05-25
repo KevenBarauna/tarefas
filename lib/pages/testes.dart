@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tarefas/db/aniversario.db.dart';
 import 'package:tarefas/utils/system.util.dart';
 
 consoletesteUsuario() async {
   getData();
+  setIdUsuario(3);
 }
 
 class PaginaTeste extends StatefulWidget {

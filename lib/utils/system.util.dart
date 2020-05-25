@@ -1,3 +1,13 @@
+int idUsuario;
+
+setIdUsuario(int id) {
+  idUsuario = id;
+}
+
+getIdUsuario() {
+  return idUsuario;
+}
+
 getData() {
   DateTime data = new DateTime.now();
   String dataFormatada =

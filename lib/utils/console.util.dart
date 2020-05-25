@@ -21,3 +21,12 @@ exibirListaUsuario(List<dynamic> lista, String titulo) {
   });
   print('\n');
 }
+
+exibirListaAniversaro(List<dynamic> lista, String titulo) {
+  print('[ $titulo ]');
+  lista.forEach((value) {
+    print(
+        'ANIVERSÁRIO ➠  ID: [${value.id}]  NOME: [${value.nome}] DATA: [${value.data}]  DESCRIÇÃO: [${value.descricao}] ID USUÁRIO: [${value.idUsuario}]');
+  });
+  print('\n');
+}

@@ -2,6 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tarefas/utils/console.util.dart';
 
 const String usuarioJson = 'dadosUsuario';
+const String aniversaioJson = 'dadosAniversario';
 
 setNovoId(List<dynamic> lista) {
   try {

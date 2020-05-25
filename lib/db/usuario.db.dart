@@ -16,7 +16,7 @@ class UsuarioDb {
           id: idInfo, nome: nomeInfo, senha: senhaInfo, email: emailInfo));
       salvar();
     } catch (erro) {
-      exibirErro(erro, 'ERRO AO LISTAR USUÁRIOS');
+      exibirErro(erro, 'ERRO AO ADICIONAR USUÁRIO');
     }
   }
 
@@ -43,7 +43,7 @@ class UsuarioDb {
       await prefs.setString(usuarioJson, jsonEncode(usuarios));
       exibirSucesso('ALTERAÇÕES SALVAS');
     } catch (erro) {
-      exibirErro(erro, 'ERRO AO LISTAR USUÁRIOS');
+      exibirErro(erro, 'ERRO AO ALTERAR USUÁRIOS');
     }
   }
 
@@ -52,6 +52,7 @@ class UsuarioDb {
     try {
       var prefs = await SharedPreferences.getInstance();
       prefs.remove(usuarioJson);
+      usuarios.removeWhere((item) => item.id != null);
       salvar();
       exibirSucesso('TODOS OS USUÁRIOS FORAM REMOVIDOS');
     } catch (erro) {

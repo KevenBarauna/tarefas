@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-const List<Color> cores = [
+List<Color> cores = [
   Color(0xFFffffff), // [0]-BRANCO
   Color(0xFF5c586f), // [1]-PRETO
   Color(0xFF0abde3), // [2]-AZUL CLARO
